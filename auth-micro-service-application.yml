@@ -1,5 +1,5 @@
 server:
-  port: 9090
+  port: 19090
 
 spring:
   datasource:
@@ -9,7 +9,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/AuthDB
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
 # ÖNEMLİ: Şifre gibi başkalarının görmesini istemeyeceğiniz verileri yml dosyasında dahi tutmak sakıncalıdır.
 # Bu nedenle bu tür bilgilerin gizlenmesi gereklidir.
 # Bu gizleme işlemi için Environment'lar(Ortam değişkenleri) kullanılmalıdır.
