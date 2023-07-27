@@ -5,8 +5,8 @@ spring:
   rabbitmq:
     host: 10.44.0.20
     port: 5672
-    username: user
-    password: user
+    username: alicemal96
+    password: Rx199630
   zipkin:
     enabled: true
     base-url: ${ZIPKIN_URL}
@@ -15,7 +15,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: root
+    password: Rx199630
     url: jdbc:postgresql://10.44.0.13:5432/AuthDB
   jpa:
     hibernate:
