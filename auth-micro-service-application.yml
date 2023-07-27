@@ -9,7 +9,7 @@ spring:
     password: Rx199630
   zipkin:
     enabled: true
-    base-url: ${ZIPKIN_URL}
+    base-url: http://10.44.0.19:9411
     service:
       name: auth-service
   datasource:
