@@ -1,29 +1,57 @@
 server:
-  port: 9090
+  port: 7071
 
 spring:
+  security:
+    user:
+      name: mustafa
+      password: 123
   rabbitmq:
-    host: 10.44.1.8
+    host: localhost
     port: 5672
-    username: alicemal96
-    password: Rx199630
+    username: user
+    password: user
   zipkin:
     enabled: true
-    base-url: http://10.44.1.13:9411
+    base-url: http://localhost:9411
     service:
       name: auth-service
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: Rx199630
-    url: jdbc:postgresql://10.44.1.12:5432/AuthDB
+    password: root
+    url: jdbc:postgresql://34.155.69.86:6060/authDb
   jpa:
     hibernate:
       ddl-auto: update
-# ÖNEMLİ: Şifre gibi başkalarının görmesini istemeyeceğiniz verileri yml dosyasında dahi tutmak sakıncalıdır.
-# Bu nedenle bu tür bilgilerin gizlenmesi gereklidir.
-# Bu gizleme işlemi için Environment'lar(Ortam değişkenleri) kullanılmalıdır.
-authservices:
-  secrets:
-    secret-key: ${JAVA9_SECRETKEY}
-    issuer: ${JAVA9_ISSUER}
+    show-sql: true
+
+
+
+
+jwt:
+  secretKey: ${java9secretkey}
+  issuer:  ${java9issuer}
+  audience: ${java9audience}
+rabbitmq:
+  auth-exchange: authExchange
+  register-queue: registerQueue
+  register-bindingKey: registerBindingKey
+  activation-bindingKey: activation
+  activation-queue: activationQueue
+  mail-bindingKey: mailKey
+  mail-queue: mailQueue
+redis:
+  host: localhost
+  port:  6379
+
+logging:
+  level:
+    root: info
+  file:
+    name: auth.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+
+
