@@ -3,7 +3,7 @@ server:
 
 spring:
   rabbitmq:
-    host: 10.44.0.20
+    host: 10.44.1.8
     port: 5672
     username: alicemal96
     password: Rx199630
@@ -16,7 +16,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: Rx199630
-    url: jdbc:postgresql://10.44.0.13:5432/AuthDB
+    url: jdbc:postgresql://10.44.1.12:5432/AuthDB
   jpa:
     hibernate:
       ddl-auto: update
